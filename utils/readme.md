@@ -10,9 +10,9 @@ This creates new node_folder, new src folder.
 
 `npm run create-new-block "Block C"`
 
-This create a new block withing the ./src folder.
+This create a new block within the ./src folder.
 
-While runnning this scripts, variables from the template folder will replaced:
+While runnning this scripts, patterns in the files of the template folder will replaced:
 
-    1. block-name-dashed replaced with block-c   (block-c is automatically generated)
-    2. block-name-standard replaced with Block C  (input parameter with double quotes)
+- pattern "block-name-dashed" replaced with block-c   (block-c is automatically generated)
+- pattern "block-name-standard" replaced with Block C  (input parameter with double quotes)
