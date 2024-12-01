@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/block-b",
+	"version": "0.2.0",
+	"title": "Spotwhiskey Block B",
+	"category": "spot-whiskey-blocks",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool 1.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "block-b",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"attributes": {
+		"className": {
+		  "type": "string",
+		  "default": ""
+		},
+		"altText": {
+		  "type": "string",
+		  "default": "this is an image alt"
+		},
+		"copyText": {
+		  "type": "string",
+		  "default": "This is the Copy"
+		}
+	}
+}
