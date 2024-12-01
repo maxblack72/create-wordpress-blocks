@@ -19,7 +19,7 @@
 	"attributes": {
 		"isEditing": {
 		  "type": "boolean",
-		  "default": ""
+		  "default": "false"
 		},
 		"copyText": {
 		  "type": "string",
