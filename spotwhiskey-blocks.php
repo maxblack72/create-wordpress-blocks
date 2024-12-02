@@ -35,8 +35,13 @@ add_filter( 'block_categories_all', 'blocks_register_block_category' );
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function create_block_spotwhiskey_blocks_block_init() {
-    register_block_type( __DIR__ . '/build/block-a' );
-    register_block_type( __DIR__ . '/build/block-b' );
-    register_block_type( __DIR__ . '/build/block-c' );
+    $build_dir = __DIR__ . '/build';
+    $blocks = array_diff(scandir($build_dir), array('.', '..'));
+
+    foreach ($blocks as $block) {
+        if (is_dir($build_dir . '/' . $block)) {
+            register_block_type($build_dir . '/' . $block);
+        }
+    }
 }
 add_action( 'init', 'create_block_spotwhiskey_blocks_block_init' );

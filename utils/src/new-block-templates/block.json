@@ -15,7 +15,6 @@
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
-	"viewScript": "file:./view.js",
 	"attributes": {
 		"isEditing": {
 		  "type": "boolean",
@@ -23,7 +22,7 @@
 		},
 		"copyText": {
 		  "type": "string",
-		  "default": "Copy Text"
+		  "default": "Copy Text default"
 		}
 	}
 }
