@@ -37,7 +37,7 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<p { ...useBlockProps() }>
 			{ __(
-				'Spotwhiskey block-name-standard – hello from the editor!',
+				'Spotwhiskey Block C – hello from the editor!',
 				'spotwhiskey-blocks'
 			) }
 			<Component 

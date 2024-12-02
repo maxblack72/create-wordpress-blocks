@@ -22,7 +22,7 @@ export default function save({ attributes }) {
 
 	return (
 		<div { ...useBlockProps.save() }>
-			{ 'Spotwhiskey block-name-standard – hello from the saved content!' }
+			{ 'Spotwhiskey Block C – hello from the saved content!' }
 			<Component attributes={attributes} />
 		</div>
 	);

@@ -9,7 +9,7 @@ const Section = ({attributes}) => {
     return (
         <section>
             is Editing? {isEditing ? 'true' : 'false'}<br />
-            this is copyText: { copyText } <br/>
+            this is copytext: { copyText } <br/>
             {isEditing ? <InnerBlocks /> : <InnerBlocks.Content /> }
         </section>
     );
