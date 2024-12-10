@@ -5,7 +5,7 @@ const path = require('path');
 const inputString = process.argv[2];
 
 if (!inputString) {
-  console.error('Please provide a string as an argument.');
+  console.error('Please provide a string as an argument in double quotes if it contains spaces.');
   process.exit(1);
 }
 // Transform the input string to kebab-case

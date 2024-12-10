@@ -11,8 +11,8 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
-
+import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import { PanelBody, TextControl } from '@wordpress/components';
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * Those files can contain any CSS code that gets applied to the editor.
@@ -35,15 +35,28 @@ export default function Edit({ attributes, setAttributes }) {
 	attributes.isEditing = true;
 
 	return (
-		<p { ...useBlockProps() }>
-			{ __(
-				'Spotwhiskey block-name-standard – hello from the editor!',
-				'spotwhiskey-blocks'
-			) }
-			<Component 
-				attributes={attributes}
-                setAttributes={setAttributes} 
-			/>
-		</p>
+		<>
+            <InspectorControls>
+                <PanelBody title={__('Content', 'text-domain')} initialOpen={true}>
+                    <TextControl
+                        label={__('Text', 'text-domain')}
+                        value={attributes.copyText}
+                        onChange={(value) => setAttributes({ copyText: value })}
+                        placeholder={__('Enter text...', 'text-domain')}
+                    />
+                </PanelBody>
+            </InspectorControls>
+
+			<div { ...useBlockProps() }>
+				{ __(
+					'Spotwhiskey block-name-standard – hello from the editor!',
+					'spotwhiskey-blocks'
+				) }
+				<Component 
+					attributes={attributes}
+					setAttributes={setAttributes} 
+				/>
+			</div>
+		</>
 	);
 }
